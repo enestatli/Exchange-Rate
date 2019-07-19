@@ -3,7 +3,8 @@ $(document).ready(function() {
 })
 
 const displayContent = () => {
-  $(".loader").addClass("loading")
+  //$(".loader").addClass("loading")
+  $('body').addClass("loading")
   $.ajax({
   type:"GET",
   url:"https://test.cors.workers.dev/?https://www.bloomberght.com/piyasa/intradaydata/dolar",
@@ -21,7 +22,8 @@ const displayContent = () => {
     },
   });
   setTimeout(function(){
-    $('.loader').removeClass("loading")
+    //$('.loader').removeClass("loading")
+    $('body').removeClass("loading")
   },1500)
 }
 
